@@ -6,7 +6,7 @@ function processaNumeros(num1, num2) {
 }
 
 function isEqual(num1, num2) {
-    return num1 == num2 
+    return num1 === num2 
             ? 'são iguais'
             : 'não são iguais';
 }
