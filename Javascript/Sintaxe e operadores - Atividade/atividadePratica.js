@@ -1,8 +1,12 @@
 function processaNumeros(num1, num2) {
-    return `Os números ${num1} e ${num2} ${isEqual(num1,num2)}. `
-            .concat(`Sua soma é ${getSum(num1, num2)}, `)
-            .concat(`que é ${greaterOrLesserThan(getSum(num1, num2), 10)} 10 `)
-            .concat(`e ${greaterOrLesserThan(getSum(num1, num2), 20)} 20.`);
+    if(!isNullOrUndefined(num1) && !isNullOrUndefined(num2)) {
+        return `Os números ${num1} e ${num2} ${isEqual(num1,num2)}. `
+                .concat(`Sua soma é ${getSum(num1, num2)}, `)
+                .concat(`que é ${greaterOrLessThan(getSum(num1, num2), 10)} 10 `)
+                .concat(`e ${greaterOrLessThan(getSum(num1, num2), 20)} 20.`);
+    } else {
+        return 'Defina dois números!';
+    }
 }
 
 function isEqual(num1, num2) {
@@ -15,7 +19,7 @@ function getSum(num1, num2) {
     return num1 + num2;
 }
 
-function greaterOrLesserThan(num1, num2) {
+function greaterOrLessThan(num1, num2) {
     if(num1 > num2) {
         return 'maior que'; 
     } else if(num1 < num2) {
@@ -23,6 +27,10 @@ function greaterOrLesserThan(num1, num2) {
     } else {
         return 'igual a';
     }
+}
+
+function isNullOrUndefined(value) {
+    return value == undefined || value == null;
 }
 
 //Testes
