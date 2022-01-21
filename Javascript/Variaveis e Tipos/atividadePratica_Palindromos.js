@@ -43,7 +43,7 @@ function ePalindromo_V1_Array(texto) {
 function verificaPalindromo_V2_String(texto) {
     let ultimoIndiceTexto = texto.length - 1;
     
-    for(let i = 0; i < texto.length; i++) {
+    for(let i = 0; i < texto.length / 2; i++) {
         if(texto[i] != texto[ultimoIndiceTexto - i]) {
             return false;
         }
