@@ -1,6 +1,9 @@
 function getValoresUnicos(vetor) {
     let set = new Set(vetor);
-    console.log(Array.from(set));
+    // console.log(Array.from(set));
+    for(let chave in set) {
+        console.log(chave);
+    }
 }
 
 //Testes
