@@ -1,0 +1,3 @@
+#### Observação Importante
+
+ - A função Map só funciona com thisArg se o callback for passado como função anônima (e não como arrow function!). Devido ao fato de que arrow functions não possuem referência ao this ou o parâmetro arguments, quando passamos por parâmetro do map o callback como arrow funtion o valor de 'this' é definido dentro do escopo do map, e não do escopo do objeto passado no thisArg.
